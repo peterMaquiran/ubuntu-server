@@ -25,8 +25,11 @@ chown -R peter:peter /home/peter/.ssh
 chmod 700 /home/peter/.ssh
 chmod 600 /home/peter/.ssh/authorized_keys
 ```
-
----
+when generating ssh key run
+```bash
+# chmod changes file permissions.
+chmod 600 ~/.ssh/id_ed25519 # so the owner can read and write
+```
 
 ## 3. Disable Root Login Over SSH
 
