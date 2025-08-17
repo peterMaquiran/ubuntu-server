@@ -69,6 +69,19 @@ action   = ufw
 
 ---
 
+## On update always test
+
+```bash
+fail2ban-regex /srv/volume/nginx_data/access.log /etc/fail2ban/filter.d/nginx-json-400.conf
+```
+then 
+```bash
+sudo fail2ban-client reload nginx-json-400
+```
+
+---
+
+
 ## Notes
 
 * Ensure Nginx log format matches the JSON pattern.
