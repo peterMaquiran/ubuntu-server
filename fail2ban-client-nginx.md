@@ -87,6 +87,7 @@ sudo fail2ban-client reload nginx-json-400
 * Ensure Nginx log format matches the JSON pattern.
 * Adjust `maxretry`, `findtime`, or `bantime` to suit your needs.
 * Test the regex before enabling the jail:
+* Do insertion test:  echo '{"time":"2025-08-17T10:00:00.000Z","remote_addr":"1.2.3.4","status":404,"request":"GET /test HTTP/1.1"}' >> /srv/volume/nginx_data/access.log
 
 ```bash
 fail2ban-regex /root/project/doneit-telemetry/nginx-logs/access.log /etc/fail2ban/filter.d/nginx-json-400.conf
